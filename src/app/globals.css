@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #00d4ff;
+  --secondary: #7b61ff;
+  --accent: #ff6b6b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #00d4ff40 #050610;
+}
+
+body {
+  background: #050610;
+  color: #e6e8ec;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050610;
+}
+::-webkit-scrollbar-thumb {
+  background: #00d4ff40;
+  border-radius: 3px;
+}
+
+::selection {
+  background: #00d4ff40;
+  color: #fff;
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 py-24 md:px-8 lg:px-12;
+  }
+  .section-title {
+    @apply text-3xl md:text-5xl font-bold tracking-tight mb-16;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+  .glow-border {
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.15), inset 0 0 15px rgba(0, 212, 255, 0.05);
+  }
+  .card-hover {
+    @apply transition-all duration-500;
+  }
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.2), 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+}

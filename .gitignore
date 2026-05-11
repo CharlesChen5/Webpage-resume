@@ -1,0 +1,47 @@
+# dependencies
+node_modules/
+
+# next.js build output
+.next/
+out/
+
+# production build
+dist/
+build/
+
+# env files
+.env
+.env*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# turbo
+.turbo/
+
+# vercel
+.vercel/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# claude code
+.claude/settings.local.json
+
+# temporary files
+*.tmp.*
